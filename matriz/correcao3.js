@@ -1,4 +1,4 @@
-// cria os vetores e adiciona os valores
+ // cria os vetores e adiciona os valores
 let regiao = []
 let dias = []
 for(let i=0;i<5;i++){

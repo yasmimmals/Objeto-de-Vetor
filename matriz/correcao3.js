@@ -50,3 +50,24 @@ for(let i=0; i<5; i++){
     }
 }
 console.log(`Quantidade de niveis criticos ${qtdNivelCritico}`)
+
+// Exibir a reguião que teve, em média o menor indice de poluição ao longo dos 5 dias.
+let medias = []
+let somaLinhas
+for(let i=0;i<poluicao.length;i++){
+    somaLinhas = 0 // linha nova temos que zerar a soma
+    for(let j=0;j<poluicao.length;j++){
+        somaLinhas += poluicao[i][j]
+    }
+    // colocar no vetor
+    medias[i] = somaLinhas / poluicao.length
+}
+let menor = medias[0]
+let posMenor = 0
+for(let i=0; i< medias.length; i++){
+    if (medias[i] < menor){
+        menor = medias[i]
+        posMenor = 1
+    }
+}
+console.log(`A região com menor média ${menor} foi ${regiao[posMenor]}`)
